@@ -1,15 +1,20 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PageWrapper from './components/PaperWrapper';
 import Home from './components/Pages/Home';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 
 class App extends Component {
   render() {
     return (
-      <PageWrapper >
-        <Home />
-        <h1>Hello</h1>
+      <Router><PageWrapper >
+
+        <Route
+          path="/"
+          component={Home}
+        />
       </PageWrapper>
+      </Router > 
     );
   }
 
