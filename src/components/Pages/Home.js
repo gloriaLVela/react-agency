@@ -7,6 +7,7 @@ import image from '../assets/img/header-bg.jpg';
 
 import Services from '../Common/Services';
 import Portfolio from '../Common/Portfolio';
+import About from '../Common/About'
 
 class Home extends Component {
     render() {
@@ -23,6 +24,7 @@ class Home extends Component {
 
                <Services />
                <Portfolio />
+               <About />
             </div>
         )
     }
