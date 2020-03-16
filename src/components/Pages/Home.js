@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 class Home extends Component {
     render() {
         return (
-            // <!-- Header -->
             <header className="masthead">
+                  {/**  // <!-- Header --> */}
                 <div className="container">
                     <div className="intro-text">
                         <div className="intro-lead-in">Welcome To Our Studio!</div>
