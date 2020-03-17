@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import AboutItem from './AboutItem';
+import TimelineItem from '../Common/TimelineItem';
 
 import img1 from '../assets/img/about/1.jpg';
 import img2 from '../assets/img/about/2.jpg';
@@ -39,7 +39,7 @@ const aboutItemList = [
     }
 ]
 
-class About extends Component {
+class Timeline extends Component {
     render() {
         return (
             <section className="page-section" id="about">
@@ -54,7 +54,7 @@ class About extends Component {
                         <div className="col-lg-12">
                             <ul className="timeline">
                                 {aboutItemList.map((item, index) => {
-                                    return (<li> <AboutItem {...item} key={index} /></li>)
+                                    return (<li> <TimelineItem {...item} key={index} /></li>)
 
                                 })}
 
@@ -74,4 +74,4 @@ class About extends Component {
     }
 }
 
-export default About;
+export default Timeline;

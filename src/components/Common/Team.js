@@ -5,7 +5,6 @@ import TeamMember from '../Common/TeamItem';
 import img1 from '../assets/img/team/1.jpg';
 import img2 from '../assets/img/team/2.jpg';
 import img3 from '../assets/img/team/3.jpg';
-// src\components\assets\img\team\1.jpg
 
 const teamMembers =[
   {image: img1,

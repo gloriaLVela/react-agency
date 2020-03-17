@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class AboutItem extends Component {
+class TimelineItem extends Component {
     render() {
         return (
             <div>
@@ -21,4 +21,4 @@ class AboutItem extends Component {
     }
 }
 
-export default AboutItem;
+export default TimelineItem;
