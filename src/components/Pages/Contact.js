@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Field from '../Common/Field';
 import image from '../assets/img/about.jpg';
-import {withFormik} from 'formik';
+import { withFormik } from 'formik';
+import * as Yup from 'yup';
 
 const fields = {
     sections: [
@@ -38,14 +39,14 @@ class Contact extends Component {
                                         return (
                                             <div className="col-md-6" key={sectionIndex}>
                                                 {section.map((field, i) => {
-                                                   return <Field 
-                                                   {...field} 
-                                                   key={i}
-                                                   value={this.props.values[field.name]}
-                                                   name={field.name}
-                                                   onChange={this.props.handleChange} onBlur={this.props.handleBlur}
-                                                   touched={(this.props.touched[field.name])}
-                                                   errors={this.props.errors[field.name]}
+                                                    return <Field
+                                                        {...field}
+                                                        key={i}
+                                                        value={this.props.values[field.name]}
+                                                        name={field.name}
+                                                        onChange={this.props.handleChange} onBlur={this.props.handleBlur}
+                                                        touched={(this.props.touched[field.name])}
+                                                        errors={this.props.errors[field.name]}
                                                     />
                                                 })}
                                             </div>)
@@ -53,10 +54,10 @@ class Contact extends Component {
                                     <div className="clearfix"></div>
                                     <div className="col-lg-12 text-center">
                                         <div id="success"></div>
-                                        <button id="sendMessageButton" 
-                                        className="btn btn-primary btn-xl text-uppercase" 
-                                        type="submit"
-                                       >Send Message</button>
+                                        <button id="sendMessageButton"
+                                            className="btn btn-primary btn-xl text-uppercase"
+                                            type="submit"
+                                        >Send Message</button>
                                     </div>
                                 </div>
                             </form>
@@ -71,23 +72,22 @@ class Contact extends Component {
 export default withFormik({
     mapPropsToValues: () => ({
         name: '',
-        phone: '',
         email: '',
-        message: ''
+        phone: '',
+        message: '',
     }),
-    validate: values => {
-        const errors = {};
-
-        Object.keys(values).map(v => {
-            if(!values[v]){
-                errors[v] = "Required";
-            }
-        })
-        
-        return errors;
-    },
+    validationSchema: Yup.object().shape({
+        name: Yup.string().min(3, 'Come on bro, your name is longer than that.').required('You must give us your name.'),
+        email: Yup.string().email('You need to give us a valid email').required('We need your email.'),
+        phone: Yup.string()
+            .min(10, 'Please provide your 10 digit phone number.')
+            .max(15, 'Your phone number is too long.')
+            .required('We need a phone number to reach you at.'),
+        message: Yup.string().min(500, 'You need to provide us more detailed information')
+            .required('Message is required.')
+    }),
     handleSubmit: (values, {setSubmitting}) => {
-        console.log("Values " + values);
+        console.log("VALUES", values);
         alert("You've submitted the form", JSON.stringify(values));
     }
 })(Contact);
