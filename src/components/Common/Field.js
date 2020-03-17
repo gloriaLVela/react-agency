@@ -14,7 +14,7 @@ class Field extends Component {
                     data-validation-required-message="Please enter your name."
                     name={this.props.name}
                     onChange={this.props.onChange}
-                    // onBlur={this.props.onBlur}
+                    onBlur={this.props.onBlur}
                 />
                 :
                 <textarea
@@ -25,7 +25,7 @@ class Field extends Component {
                     data-validation-required-message="Please enter a message."
                     name={this.props.name}
                     onChange={this.props.onChange}
-                    // onBlur={this.props.onBlur}
+                    onBlur={this.props.onBlur}
                 />
             }
             <p className="help-block text-danger">
