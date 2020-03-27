@@ -48,23 +48,6 @@ class App extends Component {
             </PageWrapper>
           )}
         />
-
-        {/* <PageWrapper >
-          <Route
-            exact={true}
-            path="/"
-            component={Home}
-          />
-          <Route
-            path="/about"
-            component={About}
-          />
-          <Route
-            path="/contact"
-            component={Contact}
-          />
-
-        </PageWrapper> */}
       </Router >
     );
   }
