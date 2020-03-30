@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import {Link } from 'react-router-dom';
+
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class PaperWrapper extends Component {
     render() {
@@ -15,19 +16,19 @@ class PaperWrapper extends Component {
                     <div className="collapse navbar-collapse" id="navbarResponsive">
                         <ul className="navbar-nav text-uppercase ml-auto">
                             <li className="nav-item">
-                               <Link className="nav-link js-scroll-trigger" to="/services">Services</Link>
+                                <Link className="nav-link js-scroll-trigger" to="/services">Services</Link>
                             </li>
                             <li className="nav-item">
-                               <Link className="nav-link js-scroll-trigger" to="/portfolio">Portfolio</Link>
+                                <Link className="nav-link js-scroll-trigger" to="/portfolio">Portfolio</Link>
                             </li>
                             <li className="nav-item">
-                               <Link className="nav-link js-scroll-trigger" to="/about">About</Link>
+                            <Link className="nav-link js-scroll-trigger" to="/about">About</Link>
                             </li>
                             <li className="nav-item">
-                               <Link className="nav-link js-scroll-trigger" to="/team">Team</Link>
+                                <Link className="nav-link js-scroll-trigger" to="/team">Team</Link>
                             </li>
                             <li className="nav-item">
-                               <Link className="nav-link js-scroll-trigger" to="/contact">Contact</Link>
+                                <Link className="nav-link js-scroll-trigger" to="/contact">Contact</Link>
                             </li>
                         </ul>
                     </div>
