@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 // Pages
 import Home from './components/Pages/Home';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import About from './components/Pages/About';
 import Contact from './components/Pages/Contact';
 import Login from './components/Pages/Login';
@@ -15,6 +16,11 @@ class App extends Component {
   render() {
     return (
       <Router>
+      <PageWrapper>
+        <Route
+          path="/"
+          component={Home}
+        />
         <Route
           path="/admin"
           render={props => (
@@ -48,7 +54,7 @@ class App extends Component {
             </PageWrapper>
           )}
         />
-      </Router >
+      </Router>
     );
   }
 

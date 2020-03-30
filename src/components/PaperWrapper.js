@@ -1,14 +1,14 @@
+
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
-
 class PaperWrapper extends Component {
     render() {
-        return <div>
-            {/* <!-- Navigation --> */}
+        return( <div>
+
             <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
                 <div className="container">
-                    <a className="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+                   <Link className="navbar-brand js-scroll-trigger" to="/">Start Bootstrap</Link>
                     <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                         Menu
                         <i className="fas fa-bars"></i>
@@ -35,7 +35,7 @@ class PaperWrapper extends Component {
                 </div>
             </nav>
             {this.props.children}
-            </div>
+        </div>)
     }
 }
 
